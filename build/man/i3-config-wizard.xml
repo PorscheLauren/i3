@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<refentry>
+<refmeta>
+<refentrytitle>i3-config-wizard</refentrytitle>
+<manvolnum>1</manvolnum>
+<refmiscinfo class="source">i3</refmiscinfo>
+<refmiscinfo class="version">4.12</refmiscinfo>
+<refmiscinfo class="manual">i3 Manual</refmiscinfo>
+</refmeta>
+<refnamediv>
+  <refname>i3-config-wizard</refname>
+  <refpurpose>creates a keysym based config based on your layout</refpurpose>
+</refnamediv>
+<refsynopsisdiv id="_synopsis">
+<simpara>i3-config-wizard</simpara>
+</refsynopsisdiv>
+<refsect1 id="_files">
+<title>FILES</title>
+<refsect2 id="_etc_i3_config_keycodes">
+<title>/etc/i3/config.keycodes</title>
+<simpara>This file contains the default configuration with keycodes. All the bindcode
+lines will be transformed to bindsym and the user-specified modifier will be
+used.</simpara>
+</refsect2>
+</refsect1>
+<refsect1 id="_description">
+<title>DESCRIPTION</title>
+<simpara>i3-config-wizard is started by i3 in its default config, unless <subscript>/.i3/config
+exists. i3-config-wizard creates a keysym based i3 config file (based on
+/etc/i3/config.keycodes) in </subscript>/.i3/config.</simpara>
+<simpara>The advantage of using keysyms is that the config file is easy to read,
+understand and modify. However, if we shipped with a keysym based default
+config file, the key positions would not be consistent across different
+keyboard layouts (take for example the homerow for movement). Therefore, we
+ship with a keycode based default config and let the wizard transform it
+according to your current keyboard layout.</simpara>
+</refsect1>
+<refsect1 id="_see_also">
+<title>SEE ALSO</title>
+<simpara>i3(1)</simpara>
+</refsect1>
+<refsect1 id="_author">
+<title>AUTHOR</title>
+<simpara>Michael Stapelberg and contributors</simpara>
+</refsect1>
+</refentry>
